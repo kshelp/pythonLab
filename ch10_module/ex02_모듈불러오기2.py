@@ -4,9 +4,9 @@
 # from 모듈 import 함수명
 # from 모듈 import 클래스명
 
-from my_area import PI
-from my_area import square_area
-from my_area import circle_area
+from my_area import PI   # 변수
+from my_area import square_area  # 함수
+from my_area import circle_area  # 함수
 # from my_area import *
 
 
