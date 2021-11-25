@@ -1,3 +1,4 @@
+# 가로 방향으로 통합하기
 import pandas as pd
 import numpy as np
 
