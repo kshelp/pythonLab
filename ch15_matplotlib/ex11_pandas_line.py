@@ -43,7 +43,7 @@ s2.plot(grid=True)
 plt.show()
 
 
-df_rain = pd.read_csv('D:\dev\workspace\python\ch14_numpy\sea_rain1.csv', index_col="연도" )
+df_rain = pd.read_csv('./ch15_matplotlib/sea_rain1.csv', index_col="연도" )
 print(df_rain)
 '''
            동해       남해       서해       전체

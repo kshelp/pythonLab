@@ -8,6 +8,15 @@ matplotlib.rcParams['axes.unicode_minus'] = False
 math = [76,82,84,83,90,86,85,92,72,71,100,87,81,76,94,78,81,60,79,69,74,87,82,68,79]
 
 df_math = pd.DataFrame(math, columns = ['Student'])
+print(df_math)
+'''
+    Student
+0        76
+1        82
+2        84
+3        83
+...(생략)
+'''
 
 math_hist = df_math.plot.hist(bins=8, grid = True)
 math_hist.set_xlabel("시험 점수")
