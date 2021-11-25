@@ -1,4 +1,3 @@
-import glob
 import pandas as pd
 excel_data_files = ['./ch16_excel/담당자별_판매량_Andy사원.xlsx',
                     './ch16_excel/담당자별_판매량_Becky사원.xlsx',
@@ -44,7 +43,7 @@ print(total_data)
 8  핸드백   C  다  365  383  308  323
 '''
 
-
+import glob
 print(glob.glob("./ch16_excel/담당자별_판매량_*사원.xlsx"))
 '''
 ['./ch16_excel\\담당자별_판매량_Andy사원.xlsx', './ch16_excel\\담당자별_판매량_Becky사
