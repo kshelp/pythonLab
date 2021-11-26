@@ -39,6 +39,7 @@ print(dict_data['사용자정보']['신체정보']['키']['#text'])
 # 175.4
 
 
+# str(xml포맷) 타입 -> dictionary 타입으로 변경
 dict_data = xmltodict.parse(xml_data)
 
 user_name = dict_data['사용자정보']['이름']

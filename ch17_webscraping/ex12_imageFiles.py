@@ -7,7 +7,15 @@ URL = 'https://www.reshot.com/search/animal'
 html_reshot_image = requests.get(URL).text
 soup_reshot_image = BeautifulSoup(html_reshot_image, "lxml")
 reshot_image_elements = soup_reshot_image.select('a img')
-reshot_image_elements[0:4]
+print(reshot_image_elements[0:4])
+'''
+[
+<img alt="Reshot" height="33" src="https://www.reshot.com/build/reshot-logo--mark-cc49363ac3f7876f854286af4266ead51a7ff9e0fa12f30677c9e758d43dd0d1.svg" title="Reshot" width="46"/>, 
+<img alt="" class="photos-item-card__image" height="2448" loading="lazy" src="https://res.cloudinary.com/twenty20/private_images/t_reshot-400/v1521838685/photosp/bae96789-a5ab-4471-b54f-9686ace09e33/bae96789-a5ab-4471-b54f-9686ace09e33.jpg" width="2448"/>, 
+<img alt="Back off!" class="photos-item-card__image" height="2361" loading="lazy" src="https://res.cloudinary.com/twenty20/private_images/t_reshot-400/v1597098233/photosp/a44357c5-b1c3-41ef-9a65-7a4937b06a44/a44357c5-b1c3-41ef-9a65-7a4937b06a44.jpg" width="3148"/>, 
+<img alt="Orphans" class="photos-item-card__image" height="3375" loading="lazy" src="https://res.cloudinary.com/twenty20/private_images/t_reshot-400/v1617578418/photosp/34fd9c70-8996-4706-a0f1-113231ed3eee/34fd9c70-8996-4706-a0f1-113231ed3eee.jpg" width="3375"/>
+]
+'''
 
 reshot_image_url = reshot_image_elements[1].get('src')
 print(reshot_image_url)
@@ -70,7 +78,7 @@ figure_folder = "./ch17_webscraping/download" # 이미지를 내려받을 폴더
 
 reshot_image_urls = get_image_url(reshot_url) # 이미지 파일의 주소 가져오기
 
-num_of_download_image = 7 # 내려받을 이미지 개수를 지정
+num_of_download_image = 10 # 내려받을 이미지 개수를 지정
 # num_of_download_image = len(reshot_image_urls) # 전체 이미지 개수
 
 for k in range(num_of_download_image):
