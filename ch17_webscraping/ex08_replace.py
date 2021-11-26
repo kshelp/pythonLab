@@ -11,6 +11,7 @@ title = soup.find('p', {"id": "title"})
 contents = soup.find_all('p', {"id": "content"})
 
 print(title.get_text())
+# 대한민국헌법
 for content in contents:
     print(content.get_text())
 '''

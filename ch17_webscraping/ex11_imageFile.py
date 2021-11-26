@@ -4,6 +4,7 @@ url = 'https://www.python.org/static/img/python-logo.png'
 
 html_image = requests.get(url)
 print(html_image)
+# <Response [200]>
 
 
 import os

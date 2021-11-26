@@ -16,21 +16,22 @@ soup_music = BeautifulSoup(html_music, "lxml")
 titles = soup_music.select('p.title a')
 print(titles[0:7])
 '''
-[<a adultcheckval="1" aria-label="새창" href="javascript:;" onclick="bugs.wiselog.area('list_tr_09_chart');bugs.music.listen('32374864',true);
-" title="쉬어 (Feat. MINO) (Prod. GRAY)">쉬어 (Feat. MINO) (Prod. GRAY)</a>, <a adultchheckval="1" aria-label="새창" href="javascript:;" onclick="bugs.wiselog.area('list_tr_09p_chart');bugs.music.listen('6132120',true);
-" title="strawberry moon">strawberry moon</a>, <a adultcheckval="1" aria-label="새창" href="javascript:;" onclick="bugs.wiselog.area('list_tr_09_chart');bugs.music.listen('32374863',true);
-" title="Wake Up (Prod. 코드 쿤스트)">Wake Up (Prod. 코드 쿤스트)</a>, <a adultcheckval="1" aria-label="새창" href="javascript:;" onclick="bugs.wiselog.area('list_tr_09_chart');bugs.music.listen('6133448',true);
-" title="낮 밤 (feat. 박재범)">낮 밤 (feat. 박재범)</a>, <a adultcheckval="1" aria-label="새창" href="javascript:;" onclick="bugs.wiselog.area('list_tr_09_chart');bugs.music.listen('6135536',true);
-" title="어제 너는 나를 버렸어">어제 너는 나를 버렸어</a>, <a adultcheckval="1" aria-label="새창" href="javascript:;" onclick="bugs.wiselog.area('list_tr_09_chart');bugs.music.listen('32349594',true);
-" title="Savage">Savage</a>, <a adultcheckval="1" aria-label="새창" href="javascript:;" onclick="bugs.wiselog.area('list_tr_09_chart');bugs.music.listen('32374861',true);    
-" title="TROUBLE (Prod. Slom)">TROUBLE (Prod. Slom)</a>]
+[<a adultcheckval="1" aria-label="새창" href="javascript:;" onclick="bugs.wiselog.area('list_tr_09_chart');bugs.music.listen('31999479',true);
+" title="Dynamite">Dynamite</a>, <a adultcheckval="1" aria-label="새창" href="javascript:;" 
+onclick="bugs.wiselog.area('list_tr_09_chart');bugs.music.listen('5990595',true);
+" title="Bad Boy">Bad Boy</a>, <a adultcheckval="1" aria-label="새창" href="javascript:;" onclick="bugs.wiselog.area('list_tr_09_chart');bugs.music.listen('5956261',true);
+" title="취기를 빌려 (취향저격 그녀 X 산들)">취기를 빌려 (취향저격 그녀 X 산들)</a>, <a adultcheckval="1" aria-label="새창" href="javascript:;" onclick="bugs.wiselog.area('list_tr_09_chart');bugs.music.listen('5990489',true);
+" title="Tight">Tight</a>, <a adultcheckval="1" aria-label="새창" href="javascript:;" onclick="bugs.wiselog.area('list_tr_09_chart');bugs.music.listen('5989318',true);
+" title="그리워하면 그댈 만날까봐">그리워하면 그댈 만날까봐</a>, <a adultcheckval="1" aria-label="새창" href="javascript:;" onclick="bugs.wiselog.area('list_tr_09_chart');bugs.music.listen('71578163',true);
+" title="숲의 아이 (Bon voyage)">숲의 아이 (Bon voyage)</a>, <a adultcheckval="1" aria-label="새창" href="javascript:;" onclick="bugs.wiselog.area('list_tr_09_chart');bugs.music.listen('32010261',true);
+" title="밤새 (취향저격 그녀 X 카더가든)">밤새 (취향저격 그녀 X 카더가든)</a>]
 '''
 
 music_titles = [title.get_text() for title in titles]
 print(music_titles[0:7])
 '''
-['쉬어 (Feat. MINO) (Prod. GRAY)', 'strawberry moon', 'Wake Up (Prod. 코드 쿤스트)', ' 
-낮 밤 (feat. 박재범)', '어제 너는 나를 버렸어', 'Savage', 'TROUBLE (Prod. Slom)']  
+['Dynamite', 'Bad Boy', '취기를 빌려 (취향저격 그녀 X 산들)', 'Tight', '그리워하면 그댈 만날
+까봐', '숲의 아이 (Bon voyage)', '밤새 (취향저격 그녀 X 카더가든)']
 '''
 
 # p 태그의 요소 중에서 class 속성값이 "artist" 인 것을 찾고
@@ -38,16 +39,14 @@ print(music_titles[0:7])
 artists = soup_music.select('p.artist a')
 print(artists[0:7])
 '''
-[<a class="artistTitle" href="https://music.bugs.co.kr/artist/80185895?wl_ref=list_tr_10_chart" title="MINO(송민호)">MINO(송민호)</a>, <a class="more" href="javascript:void(0);" name="atag_martist_list" onclick="bugs.layermenu.openMultiArtistSearchResultPopLayer(this, 'MINO(송민호)||MINO(송민호)||80185895||OK\\nAnandelight||아넌딜라이트(Anandelight)||20070271||OK\\nunofficialboyy||unofficialboyy||20036043||OK\\nBE\'O (비오)||BE\'O 
-(비오)||80337001||OK\\n지구인||지구인||80126124||OK\\nMudd the student||Mudd the student||20096572||OK', ''); return false;" title="아티스트 전체보기" wise_log_str="?wl_ref=list_tr_10_chart">
-MINO(송민호)
-</a>, <a href="https://music.bugs.co.kr/artist/80049126?wl_ref=list_tr_10_chart" onclick="
-" title="아이유(IU)">아이유(IU)</a>, <a class="artistTitle" href="https://music.bugs.co.kr/artist/2916?wl_ref=list_tr_10_chart" title="개코">개코</a>, <a class="more" href="javascript:void(0);" name="atag_martist_list" onclick="bugs.layermenu.openMultiArtistSearchResultPopLayer(this, '개코||개코||2916||OK\\nOurealgoat||Ourealgoat (아우릴고트)||20076067||OK\\nSINCE||SINCE||20056615||OK\\n안병웅||안병웅||20086251||OK\\nTabber||Tabber||80212388||OK\\n조광일||조광일||20087231||OK', ''); return false;" title="아티스트 전 
-체보기" wise_log_str="?wl_ref=list_tr_10_chart">
-개코
-</a>, <a href="https://music.bugs.co.kr/artist/20079471?wl_ref=list_tr_10_chart" onclick="
-" title="이영지">이영지</a>, <a href="https://music.bugs.co.kr/artist/80067149?wl_ref=list_tr_10_chart" onclick="
-" title="10CM">10CM</a>]
+[<a href="https://music.bugs.co.kr/artist/80079394?wl_ref=list_tr_10_chart" onclick="       
+" title="방탄소년단">방탄소년단</a>, <a class="artistTitle" href="https://music.bugs.co.kr/artist/80259080?wl_ref=list_tr_10_chart" title="청하">청하</a>, <a class="more" href="javascript:void(0);" name="atag_martist_list" onclick="bugs.layermenu.openMultiArtistSearchResultPopLayer(this, '청하||청하||80259080||OK\\nChristopher||Christopher(크리스토퍼)||80197801||OK', ''); return false;" title="아티스트 전체보기" wise_log_str="?wl_ref=list_tr_10_chart">    
+청하
+</a>, <a href="https://music.bugs.co.kr/artist/80098628?wl_ref=list_tr_10_chart" onclick="  
+" title="산들">산들</a>, <a href="https://music.bugs.co.kr/artist/80067149?wl_ref=list_tr_10_chart" onclick="
+" title="10CM">10CM</a>, <a href="https://music.bugs.co.kr/artist/80173310?wl_ref=list_tr_10_chart" onclick="
+" title="김나영">김나영</a>, <a href="https://music.bugs.co.kr/artist/80226922?wl_ref=list_tr_10_chart" onclick="
+" title="유아 (오마이걸)">유아 (오마이걸)</a>]
 '''
 
 artists = soup_music.select('p.artist a:not(.more)')
@@ -62,7 +61,7 @@ print(artists[0:7])
 
 music_artists = [artist.get_text() for artist in artists]
 print(music_artists[0:7])
-# ['MINO(송민호)', '아이유(IU)', '개코', '이영지', '10CM', 'aespa', 'Zion.T']
+# ['방탄소년단', '청하', '산들', '10CM', '김나영', '유아 (오마이걸)', '카더가든']
 
 
 url = "https://music.bugs.co.kr/chart/track/week/total?chartdate=20200921"
@@ -124,7 +123,7 @@ def bugs_music_week_top100(year, month, day):
 
 
 # 날짜를 지정해 bugs_music_week_top100() 함수 호출
-bugs_music_titles, bugs_music_artists = bugs_music_week_top100(2020, 9, 21)
+bugs_music_titles, bugs_music_artists = bugs_music_week_top100(2021, 11, 25)
 
 # 곡명과 아티스트를 저장할 파일 이름을 폴더와 함께 지정
 file_name = './ch17_webscraping/bugs_week_top100.txt'
@@ -138,4 +137,4 @@ for k in range(len(bugs_music_titles)):
 
 f.close()  # 파일 닫기
 
-glob.glob(file_name)  # 생성된 파일 확인
+print(glob.glob(file_name))  # 생성된 파일 확인

@@ -33,17 +33,16 @@ soup_website_ranking = BeautifulSoup(html_website_ranking, "lxml")
 # p 태그의 요소 안에서 a 태그의 요소를 찾음
 website_ranking = soup_website_ranking.select('p a')
 website_ranking_address = [website_ranking_element.get_text(
-) for website_ranking_element in website_ranking]
+) for website_ranking_element in website_ranking[1:]]
 
 print("[Top Sites in South Korea]")
-for k in range(6):
+for k in range(5):
     print("{0}: {1}".format(k+1, website_ranking_address[k]))
 '''
 [Top Sites in South Korea]
-1: this explanation
-2: Google.com
-3: Naver.com
-4: Youtube.com
-5: Daum.net
-6: Tistory.com
+1: Google.com
+2: Naver.com
+3: Youtube.com
+4: Daum.net
+5: Tistory.com
 '''
